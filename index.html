@@ -11,33 +11,71 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #f5f7fb;
+      display: flex;
+      min-height: 100vh;
       color: #1f2937;
     }
 
-    nav {
-      background: white;
-      padding: 14px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    /* SIDEBAR */
+    .sidebar {
+      width: 240px;
+      background: #111827;
+      color: white;
+      padding: 25px 15px;
+      position: fixed;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    nav a {
-      margin: 0 12px;
+    .logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid white;
+    }
+
+    .site-title {
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav a {
+      color: white;
       text-decoration: none;
-      color: #111827;
+      padding: 12px;
+      margin: 4px 0;
+      border-radius: 8px;
       font-weight: 500;
     }
 
-    header {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
+    .nav a:hover {
+      background: #1f2937;
     }
 
-    header img {
-      height: 130px;
-      margin-bottom: 15px;
+    /* MAIN CONTENT */
+    .main {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+    }
+
+    header {
+      background: linear-gradient(135deg, #111827, #1e3a8a);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
     }
 
     header h1 {
@@ -63,11 +101,6 @@
       font-weight: 600;
     }
 
-    .btn.secondary {
-      background: white;
-      color: #111827;
-    }
-
     .section {
       padding: 60px 20px;
       max-width: 1000px;
@@ -89,13 +122,6 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     }
 
-    .cta {
-      background: #1e3a8a;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
     footer {
       background: #111827;
       color: white;
@@ -107,62 +133,91 @@
       color: #60a5fa;
       text-decoration: none;
     }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      .main {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="mission.html">Mission</a>
-  <a href="involved.html">Get Involved</a>
-  <a href="donate.html">Donate</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<!-- SIDEBAR -->
+<div class="sidebar">
 
-<header>
-  <img src="logo.png" alt="Logo">
-  <h1>The Chosen Connection</h1>
-  <p>Building stronger individuals, families, and communities through connection, support, and service.</p>
+  <img class="logo" src="logo.png" alt="Logo">
 
-  <a class="btn" href="donate.html">Donate</a>
-  <a class="btn secondary" href="involved.html">Get Involved</a>
-</header>
-
-<section class="section">
-  <h2>What We Do</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Community Support</h3>
-      <p>Helping individuals and families access resources and connection.</p>
-    </div>
-
-    <div class="card">
-      <h3>Service Outreach</h3>
-      <p>Organizing meaningful service opportunities that uplift communities.</p>
-    </div>
-
-    <div class="card">
-      <h3>Growth & Connection</h3>
-      <p>Creating spaces where people feel seen and supported.</p>
-    </div>
+  <div class="site-title">
+    The Chosen Connection
   </div>
-</section>
 
-<section class="cta">
-  <h2>Join Us in Making a Difference</h2>
-  <p>Every connection matters.</p>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="mission.html">Mission</a>
+    <a href="involved.html">Get Involved</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-  <a class="btn" href="donate.html">Donate</a>
-  <a class="btn secondary" href="involved.html">Volunteer</a>
-</section>
+</div>
 
-<footer>
-  <p>The Chosen Connection</p>
-  <a href="https://www.facebook.com/p/The-Chosen-Connection-100086598428563/" target="_blank">Facebook</a>
-</footer>
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <header>
+    <h1>The Chosen Connection</h1>
+    <p>Building stronger individuals, families, and communities through connection, support, and service.</p>
+
+    <a class="btn" href="donate.html">Donate</a>
+    <a class="btn" href="involved.html">Get Involved</a>
+  </header>
+
+  <section class="section">
+    <h2>What We Do</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Community Support</h3>
+        <p>Helping individuals and families access resources and connection.</p>
+      </div>
+
+      <div class="card">
+        <h3>Service Outreach</h3>
+        <p>Organizing meaningful service opportunities that uplift communities.</p>
+      </div>
+
+      <div class="card">
+        <h3>Growth & Connection</h3>
+        <p>Creating spaces where people feel seen and supported.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>The Chosen Connection</p>
+    <a href="https://www.facebook.com/p/The-Chosen-Connection-100086598428563/" target="_blank">
+      Facebook
+    </a>
+  </footer>
+
+</div>
 
 </body>
 </html>
