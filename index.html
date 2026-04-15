@@ -71,24 +71,40 @@
       width: calc(100% - 240px);
     }
 
-    header {
-      background: linear-gradient(135deg, #111827, #1e3a8a);
-      color: white;
-      text-align: center;
-      padding: 90px 20px;
-    }
+  <header style="background:#111827; color:white; padding:80px 20px;">
 
-    header h1 {
-      font-size: 52px;
-      margin: 0;
-    }
+  <div style="display:flex; align-items:center; justify-content:center; gap:30px; flex-wrap:wrap;">
 
-    header p {
-      max-width: 750px;
-      margin: 20px auto;
-      font-size: 18px;
-      opacity: 0.9;
-    }
+    <!-- LEFT IMAGE -->
+    <img src="left.jpg" alt="Left Image"
+         style="width:140px; height:140px; object-fit:cover; border-radius:12px;">
+
+    <!-- CENTER CONTENT -->
+    <div style="text-align:center; max-width:600px;">
+      <h1 style="font-size:48px; margin:0;">
+        The Chosen Connection
+      </h1>
+
+      <p style="margin:15px 0; font-size:18px;">
+        Diversity isn’t always chosen—but who you rise with is.
+      </p>
+
+      <a href="donate.html" style="padding:12px 20px; background:#3b82f6; color:white; text-decoration:none; border-radius:8px; margin:5px;">
+        Donate
+      </a>
+
+      <a href="involved.html" style="padding:12px 20px; background:white; color:#111827; text-decoration:none; border-radius:8px; margin:5px;">
+        Get Involved
+      </a>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <img src="right.jpg" alt="Right Image"
+         style="width:140px; height:140px; object-fit:cover; border-radius:12px;">
+
+  </div>
+
+</header>
 
     .btn {
       display: inline-block;
