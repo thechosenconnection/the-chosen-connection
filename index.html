@@ -10,10 +10,8 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f5f7fb;
       display: flex;
-      min-height: 100vh;
-      color: #1f2937;
+      background: #f5f7fb;
     }
 
     /* SIDEBAR */
@@ -21,12 +19,12 @@
       width: 240px;
       background: #111827;
       color: white;
-      padding: 25px 15px;
+      height: 100vh;
       position: fixed;
-      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 20px;
     }
 
     .logo {
@@ -35,119 +33,66 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
-      border: 3px solid white;
     }
 
-    .site-title {
-      font-size: 18px;
+    .title {
       font-weight: 700;
       text-align: center;
       margin-bottom: 30px;
     }
 
-    .nav {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-    }
-
     .nav a {
+      display: block;
       color: white;
       text-decoration: none;
-      padding: 12px;
-      margin: 4px 0;
-      border-radius: 8px;
-      font-weight: 500;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 6px;
     }
 
     .nav a:hover {
       background: #1f2937;
     }
 
-    /* MAIN CONTENT */
+    /* MAIN */
     .main {
       margin-left: 240px;
-      width: calc(100% - 240px);
+      width: 100%;
     }
 
-  <header style="background:#111827; color:white; padding:80px 20px;">
+    header {
+      background: linear-gradient(135deg, #111827, #1e3a8a);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-  <div style="display:flex; align-items:center; justify-content:center; gap:30px; flex-wrap:wrap;">
-
-    <!-- LEFT IMAGE -->
-    <img src="left.jpg" alt="Left Image"
-         style="width:140px; height:140px; object-fit:cover; border-radius:12px;">
-
-    <!-- CENTER CONTENT -->
-    <div style="text-align:center; max-width:600px;">
-      <h1 style="font-size:48px; margin:0;">
-        The Chosen Connection
-      </h1>
-
-      <p style="margin:15px 0; font-size:18px;">
-        Diversity isn’t always chosen—but who you rise with is.
-      </p>
-
-      <a href="donate.html" style="padding:12px 20px; background:#3b82f6; color:white; text-decoration:none; border-radius:8px; margin:5px;">
-        Donate
-      </a>
-
-      <a href="involved.html" style="padding:12px 20px; background:white; color:#111827; text-decoration:none; border-radius:8px; margin:5px;">
-        Get Involved
-      </a>
-    </div>
-
-    <!-- RIGHT IMAGE -->
-    <img src="right.jpg" alt="Right Image"
-         style="width:140px; height:140px; object-fit:cover; border-radius:12px;">
-
-  </div>
-
-</header>
+    header h1 {
+      font-size: 48px;
+    }
 
     .btn {
       display: inline-block;
-      margin: 10px;
-      padding: 14px 22px;
-      border-radius: 8px;
+      padding: 12px 20px;
       background: #3b82f6;
       color: white;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: 600;
+      margin: 10px;
     }
 
     .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 50px 20px;
       text-align: center;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      max-width: 900px;
+      margin: auto;
     }
 
     footer {
+      text-align: center;
+      padding: 20px;
       background: #111827;
       color: white;
-      text-align: center;
-      padding: 30px;
-    }
-
-    footer a {
-      color: #60a5fa;
-      text-decoration: none;
     }
 
     /* MOBILE */
@@ -164,7 +109,6 @@
 
       .main {
         margin-left: 0;
-        width: 100%;
       }
     }
   </style>
@@ -174,65 +118,44 @@
 
 <!-- SIDEBAR -->
 <div class="sidebar">
+  <img src="logo.png" class="logo">
 
-  <img class="logo" src="logo.png" alt="Logo">
-
-  <div class="site-title">
+  <div class="title">
     The Chosen Connection
   </div>
 
   <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="mission.html">Mission</a>
-    <a href="involved.html">Get Involved</a>
-    <a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Mission</a>
+    <a href="#">Get Involved</a>
+    <a href="#">Donate</a>
+    <a href="#">Contact</a>
   </div>
-
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <div class="main">
 
   <header>
     <h1>The Chosen Connection</h1>
-    <p>“Diversity isn’t always chosen—but who you rise with is.”
-      
-The Chosen Connection exists to support children who have experienced the loss of a parent through death by creating safe spaces for healing, connection, and community.</p>
+    <p>Diversity isn’t always chosen—but who you rise with is.</p>
 
-    <a class="btn" href="donate.html">Donate</a>
-    <a class="btn" href="involved.html">Get Involved</a>
+    <a class="btn" href="#">Donate</a>
+    <a class="btn" href="#">Get Involved</a>
   </header>
 
-  <section class="section">
+  <div class="section">
     <h2>What We Do</h2>
 
-    <div class="cards">
-
-      <div class="card">
-        <h3>Community Support</h3>
-        <p>Helping individuals and families access resources and connection.</p>
-      </div>
-
-      <div class="card">
-        <h3>Service Outreach</h3>
-        <p>Organizing meaningful service opportunities that uplift communities.</p>
-      </div>
-
-      <div class="card">
-        <h3>Growth & Connection</h3>
-        <p>Creating spaces where people feel seen and supported.</p>
-      </div>
-
-    </div>
-  </section>
+    <p>
+      We create events and connection opportunities for children who have experienced the loss of a parent,
+      helping them feel seen, supported, and not alone.
+    </p>
+  </div>
 
   <footer>
     <p>The Chosen Connection</p>
-    <a href="https://www.facebook.com/p/The-Chosen-Connection-100086598428563/" target="_blank">
-      Facebook
-    </a>
   </footer>
 
 </div>
