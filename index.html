@@ -679,6 +679,39 @@
       margin-bottom: 28px;
     }
 
+    .sponsor-flyer-link {
+      display: block;
+      margin: 48px auto 0;
+      max-width: 520px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg);
+    }
+
+    .sponsor-flyer-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .sponsor-flyer {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .sponsor-flyer-caption {
+      display: block;
+      padding: 14px 20px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      text-align: center;
+      border-top: 1px solid var(--color-border);
+    }
+
     .memorial-gift {
       margin-top: 56px;
       padding: 36px 32px;
@@ -1185,6 +1218,11 @@
       <button type="button" class="btn btn-venmo" onclick="openVenmoModal()">Donate via Venmo</button>
       <a href="#contact" class="btn btn-secondary">Become a Sponsor</a>
     </div>
+
+    <a href="photos/sponsorship-flyer.jpg" target="_blank" rel="noopener" class="sponsor-flyer-link fade-in" aria-label="Open full sponsorship flyer in a new tab">
+      <img src="photos/sponsorship-flyer.jpg" alt="Sponsorship Opportunities flyer for the Summer Bash Ropes Course Event — Title Sponsor $1,000, Community Sponsor $500, Friend Sponsor $250" class="sponsor-flyer">
+      <span class="sponsor-flyer-caption">Sponsorship Opportunities &middot; Summer Bash 2026 &middot; Click to view full flyer</span>
+    </a>
 
     <div class="memorial-gift fade-in">
       <h3>&ldquo;In Memory Of&rdquo; Gifts</h3>
