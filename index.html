@@ -235,6 +235,86 @@
       transform: translateY(-1px);
     }
 
+    .btn-venmo {
+      background: #3D95CE;
+      color: white;
+      border: 1px solid #3D95CE;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .btn-venmo:hover {
+      background: #2f7fb3;
+      border-color: #2f7fb3;
+      transform: translateY(-1px);
+    }
+
+    /* VENMO MODAL */
+    .venmo-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1100;
+      background: rgba(0, 0, 0, 0.7);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      cursor: pointer;
+    }
+
+    .venmo-modal.open {
+      display: flex;
+    }
+
+    .venmo-modal-content {
+      background: var(--color-bg);
+      border-radius: 16px;
+      padding: 32px 28px 28px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      cursor: default;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .venmo-modal-content h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .venmo-modal-content p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      margin-bottom: 18px;
+    }
+
+    .venmo-modal-content img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .venmo-modal-close {
+      position: absolute;
+      top: 8px;
+      right: 14px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      line-height: 1;
+      color: var(--color-text-light);
+      cursor: pointer;
+    }
+
+    .venmo-modal-close:hover {
+      color: var(--color-text);
+    }
+
     /* DIVIDER */
     .divider {
       max-width: var(--max-width);
@@ -951,6 +1031,16 @@
   <div class="lightbox-counter" id="lightboxCounter"></div>
 </div>
 
+<!-- VENMO MODAL -->
+<div class="venmo-modal" id="venmoModal" onclick="closeVenmoModal(event)">
+  <div class="venmo-modal-content" onclick="event.stopPropagation()">
+    <button class="venmo-modal-close" onclick="closeVenmoModal()" aria-label="Close">&times;</button>
+    <h3>Donate via Venmo</h3>
+    <p>Scan the QR code or search <strong>@thechosenconnection</strong></p>
+    <img src="photos/venmo-qr.jpg" alt="Venmo QR code for The Chosen Connection (@thechosenconnection)">
+  </div>
+</div>
+
 <!-- MISSION -->
 <div class="section fade-in" id="mission">
   <p class="section-label">Our Mission</p>
@@ -1074,6 +1164,7 @@
     <p>Your donation directly funds adventures and connection opportunities for children who have experienced loss. Every dollar helps us reach more families.</p>
     <div class="hero-buttons">
       <a href="https://www.paypal.com" class="btn btn-warm" target="_blank" rel="noopener">Donate via PayPal</a>
+      <button type="button" class="btn btn-venmo" onclick="openVenmoModal()">Donate via Venmo</button>
       <a href="#contact" class="btn btn-secondary">Become a Sponsor</a>
     </div>
 
@@ -1202,6 +1293,27 @@
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') navigateLightbox(-1);
     if (e.key === 'ArrowRight') navigateLightbox(1);
+  });
+
+  // === VENMO MODAL ===
+  const venmoModal = document.getElementById('venmoModal');
+
+  function openVenmoModal() {
+    venmoModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVenmoModal(e) {
+    if (e && e.target !== venmoModal) return;
+    venmoModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && venmoModal.classList.contains('open')) {
+      venmoModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
   });
 
   // === SCROLL ANIMATIONS ===
