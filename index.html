@@ -1186,6 +1186,26 @@
 </div>
 
 <!-- BIO MODALS -->
+<div class="venmo-modal bio-modal" id="bioLiz" onclick="closeBio(event)">
+  <div class="venmo-modal-content bio-modal-content" onclick="event.stopPropagation()" role="dialog" aria-modal="true" aria-labelledby="bioLizName">
+    <button class="venmo-modal-close" onclick="closeBio()" aria-label="Close">&times;</button>
+    <div class="bio-modal-body">
+      <div class="bio-modal-header">
+        <img src="photos/team-elizabeth.jpg" alt="Elizabeth Palmer-Bastian">
+        <div>
+          <h3 id="bioLizName">Elizabeth Palmer-Bastian</h3>
+          <p class="bio-modal-role">Cofounder</p>
+        </div>
+      </div>
+      <p>Liz Palmer Bastian, a devoted mom and bonus mom to eight incredible kids whose life has been shaped by grief, resilience, love, and service.</p>
+      <p>Liz was widowed at 31, with four young children. Their ages were 7, 5, 4, and 2. She quickly realized that her children needed additional love and support after their devastating loss of their husband and father, Cameron. She looked for male role models to surround her children with and it wasn&rsquo;t enough. She saw that her children needed community. They needed other children that were in similar situations as theirs, so Liz started hosting hikes, park days, and other family activities in search of building this connection for her children. This was the start of The Chosen Connection that now services over 60 families a year, and building lifelong memories for hundreds of children.</p>
+      <p>As a single mother, Liz earned her Bachelor of Science in Family Science from Utah Valley University, where her passion for strengthening families and building meaningful connections took root.</p>
+      <p>Liz remarried and joined families with her husband, Marcus. Marcus is a widower with 4 children of his own and has increased her household size to 10! The whole family is actively involved in The Chosen Connection as her children still attend activities and prepare to be mentors in the summer program.</p>
+      <p>Whether she&rsquo;s advocating for grieving families, raising a beautifully blended family, or sharing wisdom learned through life&rsquo;s unexpected paths, Liz brings authenticity, compassion, and a unique perspective to the organization.</p>
+    </div>
+  </div>
+</div>
+
 <div class="venmo-modal bio-modal" id="bioGeorgia" onclick="closeBio(event)">
   <div class="venmo-modal-content bio-modal-content" onclick="event.stopPropagation()" role="dialog" aria-modal="true" aria-labelledby="bioGeorgiaName">
     <button class="venmo-modal-close" onclick="closeBio()" aria-label="Close">&times;</button>
@@ -1336,6 +1356,7 @@
       <div class="volunteer-photo"><img src="photos/team-elizabeth.jpg" alt="Elizabeth Palmer-Bastian"></div>
       <div class="volunteer-name">Elizabeth Palmer-Bastian</div>
       <div class="volunteer-role">Cofounder</div>
+      <button type="button" class="volunteer-bio-link" onclick="openBio('bioLiz')">Read Liz&rsquo;s story &rarr;</button>
     </div>
     <div class="volunteer fade-in fade-in-delay-1">
       <div class="volunteer-photo"><img src="photos/team-amanda.jpg" alt="Amanda Hunt"></div>
