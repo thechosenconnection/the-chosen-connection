@@ -1186,6 +1186,25 @@
 </div>
 
 <!-- BIO MODALS -->
+<div class="venmo-modal bio-modal" id="bioGeorgia" onclick="closeBio(event)">
+  <div class="venmo-modal-content bio-modal-content" onclick="event.stopPropagation()" role="dialog" aria-modal="true" aria-labelledby="bioGeorgiaName">
+    <button class="venmo-modal-close" onclick="closeBio()" aria-label="Close">&times;</button>
+    <div class="bio-modal-body">
+      <div class="bio-modal-header">
+        <img src="photos/team-georgia.jpg" alt="Georgia Allred">
+        <div>
+          <h3 id="bioGeorgiaName">Georgia Allred</h3>
+          <p class="bio-modal-role">Social Media Specialist &mdash; Board Member</p>
+        </div>
+      </div>
+      <p>Georgia Allred is a wellness coach, speaker, and wholehearted believer that healing and laughter can coexist. Her relationship with grief started early&mdash;at 11, after losing her two-year-old brother&mdash;and deepened when she became a widow at 32, raising three young children on her own.</p>
+      <p>Life didn&rsquo;t exactly ease up after that, but somewhere along the way, Georgia learned that even in the hardest seasons, light still finds a way in (sometimes with a little help from dark chocolate) &#x1F61D;</p>
+      <p>Since 2008, she has worked on and off as a coach, helping others navigate grief, heartbreak, and life&rsquo;s unexpected plot twists. Her approach is grounded in compassion, intuition, and real-life experience&mdash;not just theory. She holds a degree in Marriage and Family Studies and continues to invest in her own growth, because she knows you can&rsquo;t guide others somewhere you&rsquo;re not willing to go yourself.</p>
+      <p>Rooted in her faith as a member of The Church of Jesus Christ of Latter-day Saints, Georgia finds joy in family, friendship, singing, dancing, hiking, and anything outdoors. Her mission is simple: help others heal deeply, live fully, and find the joy in every day.</p>
+    </div>
+  </div>
+</div>
+
 <div class="venmo-modal bio-modal" id="bioDale" onclick="closeBio(event)">
   <div class="venmo-modal-content bio-modal-content" onclick="event.stopPropagation()" role="dialog" aria-modal="true" aria-labelledby="bioDaleName">
     <button class="venmo-modal-close" onclick="closeBio()" aria-label="Close">&times;</button>
@@ -1348,6 +1367,7 @@
       <div class="volunteer-photo"><img src="photos/team-georgia.jpg" alt="Georgia Allred"></div>
       <div class="volunteer-name">Georgia Allred</div>
       <div class="volunteer-role">Social Media Specialist &mdash; Board Member</div>
+      <button type="button" class="volunteer-bio-link" onclick="openBio('bioGeorgia')">Read Georgia&rsquo;s story &rarr;</button>
     </div>
     <div class="volunteer fade-in fade-in-delay-2">
       <div class="volunteer-photo"><img src="photos/team-dale.jpg" alt="Dale VanWagoner"></div>
