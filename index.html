@@ -1246,6 +1246,24 @@
   </div>
 </div>
 
+<div class="venmo-modal bio-modal" id="bioBrynn" onclick="closeBio(event)">
+  <div class="venmo-modal-content bio-modal-content" onclick="event.stopPropagation()" role="dialog" aria-modal="true" aria-labelledby="bioBrynnName">
+    <button class="venmo-modal-close" onclick="closeBio()" aria-label="Close">&times;</button>
+    <div class="bio-modal-body">
+      <div class="bio-modal-header">
+        <img src="photos/team-brynn.jpg" alt="Brynn Clinger">
+        <div>
+          <h3 id="bioBrynnName">Brynn Clinger</h3>
+          <p class="bio-modal-role">Activities Coordinator &mdash; Board Member</p>
+        </div>
+      </div>
+      <p>Brynn Clinger is a dedicated family advocate with a lifelong passion for strengthening families and helping youth discover their purpose and joy. Holding a degree in Family and Human Development, Brynn has spent the last nine years working within the public school system, serving as a trusted resource for children and parents alike.</p>
+      <p>Her heart for nonprofit work is deeply enriched by her personal journey of resilience. After navigating the profound loss of her husband, Matthew, to extra-skeletal osteosarcoma in 2021, Brynn turned her personal grief into a mission of deep empathy. Today, she walks alongside others in their own grief journeys, providing a safe, compassionate, and judgement-free space for individuals to feel, process, and heal.</p>
+      <p>Through every high and low, Brynn remains defined by an unshakeable love for life, a passion for staying active, and a firm belief that laughter is often the best medicine. When she isn&rsquo;t advocating for others, she is busy managing her five &ldquo;Wild Clingers&rdquo;&mdash;proudly wearing her title of &ldquo;crazy mom.&rdquo; An outdoor enthusiast at heart, she loves keeping on the move by camping, paddleboarding, sports, and sharing time and big laughs with the people she loves most.</p>
+    </div>
+  </div>
+</div>
+
 <!-- MISSION -->
 <div class="section fade-in" id="mission">
   <p class="section-label">Our Mission</p>
@@ -1379,6 +1397,7 @@
       <div class="volunteer-photo"><img src="photos/team-brynn.jpg" alt="Brynn Clinger"></div>
       <div class="volunteer-name">Brynn Clinger</div>
       <div class="volunteer-role">Activities Coordinator &mdash; Board Member</div>
+      <button type="button" class="volunteer-bio-link" onclick="openBio('bioBrynn')">Read Brynn&rsquo;s story &rarr;</button>
     </div>
     <div class="volunteer fade-in fade-in-delay-3">
       <div class="volunteer-photo">&#9734;</div>
